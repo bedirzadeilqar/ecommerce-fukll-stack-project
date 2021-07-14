@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "xidmet";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<div class="container">
+    <h2>Service Information </h2>
+    <table class="table table-bordered table-hover bg-warning" style="cursor: pointer;">
+        <thead>
+            <tr class="text-center" style="text-align:center !important;">
+                <th class="text-center">XidmetId</th>
+                <th class="text-center">XidmetName</th>
+                <th class="text-center">XidmetText</th>
+                <th class="text-center" colspan="2"><a href="~/Admin/newxidmet">+</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.Xidmet)
+            {
+                <tr class="text-center" style="text-align:center;">
+                    <td>@item.XidmetId</td>
+                    <td>@item.XidmetName</td>
+                    <td>@item.XidmetText</td>
+                    <td><a href="~/Admin/DeleteXidmet/@item.XidmetId">del</a></td>
+                    <td><a href="~/Admin/editXidmet/@item.XidmetId">edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

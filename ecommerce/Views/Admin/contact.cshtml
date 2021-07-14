@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "contact";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+
+<div class="container">
+    <h2>Contact Information </h2>
+    <table class="table table-bordered table-hover bg-warning" style="cursor: pointer;">
+        <thead>
+            <tr class="text-center" style="text-align:center !important;">
+                <th class="text-center">ContactId</th>
+                <th class="text-center">ContactName</th>
+                <th class="text-center">ContactEmail</th>
+                <th class="text-center">ContactText</th>
+            </tr>
+        </thead> 
+        <tbody>
+            @foreach (var item in ViewBag.Contact)
+            {
+                <tr class="text-center" style="text-align:center;">
+                    <td>@item.ContactId</td>
+                    <td>@item.ContactName</td>
+                    <td>@item.ContactEmail</td>
+                    <td>@item.ContactText</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

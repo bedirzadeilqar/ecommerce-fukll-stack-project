@@ -1,0 +1,10 @@
+﻿.fp{
+    text-align: center;
+    padding-top: 100px;
+
+}
+.fp input{
+    border-radius: 12px;
+    padding-left: 10px;
+    border: 2px solid blue;
+}

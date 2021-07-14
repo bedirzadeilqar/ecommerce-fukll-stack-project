@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "editcategory";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+@using ecommerce.Models
+<div class="container">
+    <form action="~/Admin/updatecategory/@Model.CategoryId" method="post" class="was-validated" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>CategoryName:</label>
+            <input type="text" class="form-control" id="uname" placeholder="CategoryName" name="CategoryName" value="@Model.CategoryName" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+

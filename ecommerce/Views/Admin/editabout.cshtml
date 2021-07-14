@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "editabout";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+@using ecommerce.Models
+<div class="container">
+    <form action="~/Admin/updateabout/@Model.AboutId" method="post" class="was-validated" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="uname">AboutText:</label>
+            <input type="text" class="form-control" id="uname" placeholder="AboutText" name="AboutText" value="@Model.AboutText" required>
+        </div>
+        <div class="form-group">
+            <label for="pwd">AboutPhoto:</label>
+            <input type="file" class="form-control" id="pwd" placeholder="AboutPhoto" name="AboutPhoto" value="@Model.AboutPhoto" formenctype="multipart/form-data">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+

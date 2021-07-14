@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<div class="container">
+    <h2>Home Slide List </h2>
+    <table class="table table-bordered table-hover bg-warning" style="cursor: pointer;" >
+        <thead>
+            <tr class="text-center" style="text-align:center !important;">
+                <th class="text-center">slideid</th>
+                <th class="text-center">slidename</th>
+                <th class="text-center">slidephoto</th>
+                <th class="text-center" colspan="2"><a href="~/Admin/newslide">+</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.SlideIndex)
+            {
+            <tr class="text-center" style="text-align:center;">
+                <td>@item.SlideId</td>
+                <td>@item.SlideName</td>
+                <td>@item.SlidePhoto</td>
+                <td><a href="~/Admin/Delete/@item.SlideId">del</a></td>
+                <td><a href="~/Admin/editslide/@item.SlideId">edit</a></td>
+            </tr>
+            }
+
+
+        </tbody>
+    </table>
+</div>

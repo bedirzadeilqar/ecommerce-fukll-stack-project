@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "category";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<div class="container">
+    <h2>Category Information </h2>
+    <table class="table table-bordered table-hover bg-warning" style="cursor: pointer;">
+        <thead>
+            <tr class="text-center" style="text-align:center !important;">
+                <th class="text-center">CategoryId</th>
+                <th class="text-center">CategoryName</th>
+                <th class="text-center" colspan="2"><a href="~/Admin/newcategory">+</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.Category)
+            {
+                <tr class="text-center" style="text-align:center;">
+                    <td>@item.CategoryId</td>
+                    <td>@item.CategoryName</td>
+                    <td><a href="~/Admin/deletecategory/@item.CategoryId">del</a></td>
+                    <td><a href="~/Admin/editcategory/@item.CategoryId">edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

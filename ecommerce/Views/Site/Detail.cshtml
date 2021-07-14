@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/Site.cshtml";
+}
+
+<div class="bod">
+    <div class="container zahri">
+        <div class="imgBoxd">
+            <img style="width: 450px!important;margin-left: 110px;" src="~/Content/img/@Model.MenyuPhoto" />
+
+        </div>
+        <div class="details zat">
+            <div class="content">
+                <h2>@Model.MenyuName</h2>
+
+                <p>
+                    @Model.MenyuText
+                </p>
+                <h3>@Model.MenyuQiymet</h3><br />
+                <div class="gorbagor">
+                    <form method="post" action="~/Site/basket/@Model.MenyuId">
+                        <div class="form-group">
+                            <input value="1" type="number" step="1" min="1" name="BasketNumber" />
+                        </div>
+                        @if (Request.Cookies["User"] != null)
+                        {
+                            <input type="submit" text="Sebete At" />
+                            <button onclick="zahir()" type="button" class="btn btn-primary" id="mdl">
+                                Satin Al
+                            </button>
+                        }
+                        else
+                        {
+                            <a href="#">Login</a>
+                        }
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@if(Request.Cookies["User"] != null)
+{
+    <div class="detailmodal container" style="display: none;" id="detailmodal">
+        <div class="conatiner">
+            <form method="post" action="~/Site/buy/@Model.MenyuId">
+                <img style="width: 450px!important;margin-left: 110px;" src="~/Content/img/@Model.MenyuPhoto" />
+                <input readonly class="input-field" type="text" placeholder="MenyuName" name="MenyuName" value="@Model.MenyuName" />
+                <input readonly class="input-field" type="text" placeholder="MenyuText" name="MenyuText" value="@Model.MenyuText" />
+                <input readonly class="input-field" type="text" placeholder="MenyuQiymet" name="MenyuQiymet" value="@Model.MenyuQiymet" />
+                <input step="1" min="1" value="1" class="input-field" type="number" name="BasketNumber" />
+                <input type="submit" value="satin al" />
+            </form>
+        </div>
+    </div>
+}
+
+
+
+
+
+
+

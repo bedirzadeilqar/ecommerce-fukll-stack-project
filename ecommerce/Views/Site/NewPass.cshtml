@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "NewPass";
+    Layout = "~/Views/Shared/Site.cshtml";
+}
+
+<div class="container fp" style="margin-top: 300px;padding-bottom: 100px;">
+    <form method="post" action="~/Site/NewPass1" id="register" class="input-group">
+        <input type="email" name="UserEmail" class="input-field" placeholder="email *" required />
+        <input type="text" name="UserRandomCode" class="input-field" placeholder="UserRandomCode *" required />
+        <input type="text" name="UserPassword" class="input-field" placeholder="NewPass *" required />
+
+        <button type="submit" class="submit-btn">Send</button>
+    </form>
+</div>
+

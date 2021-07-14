@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Data">
+  <DataContextMoniker Name="/DataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5848460f-c78b-4a46-8e7e-bfc1bbc2beaa" isExpanded="false" absoluteBounds="1.125, 1.125, 2, 0.45">
+      <DataClassMoniker Name="/DataDataContext/Slide" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3ed77dd-abc4-4d62-83c7-8f98ee8f8c00" absoluteBounds="1.1399999999999997, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cbc2157b-b37e-4b49-92b2-3ca55e9082ff" isExpanded="false" absoluteBounds="2.75, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/DataDataContext/About1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bde65566-0529-43e8-8018-3d54453f231f" absoluteBounds="2.765, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f1f237b5-c87d-4805-9dc9-03f837c7476e" isExpanded="false" absoluteBounds="4.25, 1.875, 2, 0.45">
+      <DataClassMoniker Name="/DataDataContext/Team" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54d03cd0-005b-43cf-8d50-ee56a84b83f1" absoluteBounds="4.265, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0df703dc-815d-4c8f-925d-ea22bace74e6" absoluteBounds="2.125, 1.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataDataContext/Xidmet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25bff5f6-7bf0-4ecd-beef-5b876dd650a3" absoluteBounds="2.14, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f61aeb7d-fbec-47b6-8169-7add13fc9fe7" isExpanded="false" absoluteBounds="6.75, 1.75, 2, 0.45">
+      <DataClassMoniker Name="/DataDataContext/Contact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7227ba4-31fe-412f-bc77-3b3700132efb" absoluteBounds="6.765, 2.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea041006-cf87-48c9-93ca-7381068af5e8" absoluteBounds="3.5, 4.25, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/DataDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8017f2cf-cf4d-4240-a2eb-8a89f29d2daf" absoluteBounds="3.515, 4.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="95733b88-71b4-453c-8ffa-2284e166a50f" isExpanded="false" absoluteBounds="2.875, 3.25, 2, 0.45">
+      <DataClassMoniker Name="/DataDataContext/Gender" />
+      <nestedChildShapes>
+        <elementListCompartment Id="43f6fb31-73d2-44c0-adc3-3243e5916776" absoluteBounds="2.89, 3.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e23be794-b76d-4048-8692-6f29b8776aee" isExpanded="false" absoluteBounds="4.5, 1.25, 2, 0.45">
+      <DataClassMoniker Name="/DataDataContext/Basket" />
+      <nestedChildShapes>
+        <elementListCompartment Id="99337422-752d-483e-8312-76c3e05a71b6" absoluteBounds="4.5150000000000006, 1.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ff146456-78b7-409d-92d4-d17bc87605fd" absoluteBounds="6.375, 2.875, 2, 1.9631982421874996">
+      <DataClassMoniker Name="/DataDataContext/Menyu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b32b7c5-8943-4a82-af0d-7ad46a14aafe" absoluteBounds="6.39, 3.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5078d76-8261-4f5e-a3dd-ac47dee6c136" isExpanded="false" absoluteBounds="7.25, 1, 2, 0.45">
+      <DataClassMoniker Name="/DataDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1fabcac2-1e2d-498e-866e-5650af83eb9b" absoluteBounds="7.265, 1.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a531c1a7-d579-4f97-8032-ba6d9d799898" absoluteBounds="0.5, 4, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DataDataContext/TotalPrice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53f2afe0-dbf8-4eff-bdd8-8b9e587f3f34" absoluteBounds="0.51500000000000057, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

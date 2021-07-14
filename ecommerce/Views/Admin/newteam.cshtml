@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "newteam";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<div class="container">
+    <form action="~/Admin/insertnewteam" method="post" class="was-validated" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="uname">TeamName:</label>
+            <input type="text" class="form-control" id="uname" placeholder="TeamName" name="TeamName" required>
+        </div>
+        <div class="form-group">
+            <label for="uname">TeamVezife:</label>
+            <input type="text" class="form-control" id="uname" placeholder="TeamVezife" name="TeamVezife" required>
+        </div>
+        <div class="form-group">
+            <label for="pwd">TeamPhoto:</label>
+            <input type="file" class="form-control" id="pwd" placeholder="TeamPhoto" name="TeamPhoto" required formenctype="multipart/form-data">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+

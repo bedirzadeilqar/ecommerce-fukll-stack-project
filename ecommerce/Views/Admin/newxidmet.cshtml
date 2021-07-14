@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "newxidmet";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<div class="container">
+    <form action="~/Admin/insertnewxidmet" method="post" class="was-validated" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="uname">XidmetName:</label>
+            <input type="text" class="form-control" id="uname" placeholder="XidmetName" name="XidmetName" required>
+        </div>
+        <div class="form-group">
+            <label for="pwd">XidmetText:</label>
+            <input type="text" class="form-control" id="pwd" placeholder="XidmetText" name="XidmetText" required formenctype="multipart/form-data">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+

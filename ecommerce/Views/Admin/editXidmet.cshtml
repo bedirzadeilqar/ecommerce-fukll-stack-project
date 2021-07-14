@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "editXidmet";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+@using ecommerce.Models
+<div class="container">
+    <form action="~/Admin/updatetXidmet/@Model.XidmetId" method="post" class="was-validated" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="uname">XidmetName:</label>
+            <input type="text" class="form-control" id="uname" placeholder="XidmetName" name="XidmetName" value="@Model.XidmetName" required>
+        </div>
+        <div class="form-group">
+            <label for="pwd">XidmetText:</label>
+            <input type="text" class="form-control" id="pwd" placeholder="XidmetText" name="XidmetText" value="@Model.XidmetText" formenctype="multipart/form-data">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+

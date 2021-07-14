@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "newmenyu";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+<div class="container">
+    <form action="~/Admin/insertnewmenyu" method="post" class="was-validated" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="uname">MenyuName:</label>
+            <input type="text" class="form-control" id="uname" placeholder="MenyuName" name="MenyuName" required>
+        </div>
+        <div class="form-group">
+            <label for="uname">MenyuText:</label>
+            <input type="text" class="form-control" id="uname" placeholder="MenyuText" name="MenyuText" required>
+        </div>
+        <div>
+            <label for="uname">MenyuQiymet:</label>
+            <input type="text" class="form-control" id="uname" placeholder="MenyuQiymet" name="MenyuQiymet" required>
+        </div>
+        <div class="form-group">
+            <label for="uname">Category:</label>
+            <select name="MenyuCategoryId">
+                @foreach (var item in ViewBag.menyu)
+                {
+                    <option value="@item.CategoryId">@item.CategoryName</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="pwd">MenyuPhoto:</label>
+            <input type="file" class="form-control" id="pwd" placeholder="MenyuPhoto" name="MenyuPhoto" required formenctype="multipart/form-data">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+

@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "About1";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<div class="container">
+    <h2>About Information </h2>
+    <table class="table table-bordered table-hover bg-warning" style="cursor: pointer;">
+        <thead>
+            <tr class="text-center" style="text-align:center !important;">
+                <th class="text-center">aboutid</th>
+                <th class="text-center">aboutname</th>
+                <th class="text-center">aboutphoto</th>
+                <th class="text-center" colspan="2"><a href="~/Admin/newabout">+</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.About1)
+            {
+                <tr class="text-center" style="text-align:center;">
+                    <td>@item.AboutId</td>
+                    <td>@item.AboutText</td>
+                    <td>@item.AboutPhoto</td>
+                    <td><a href="~/Admin/DeleteAbout/@item.AboutId">del</a></td>
+                    <td><a href="~/Admin/editabout/@item.AboutId">edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

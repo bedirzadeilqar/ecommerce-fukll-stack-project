@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "menyu";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+<div class="container">
+    <h2>Menyu Information </h2>
+    <table class="table table-bordered table-hover bg-warning" style="cursor: pointer;">
+        <thead>
+            <tr class="text-center" style="text-align:center !important;">
+                <th class="text-center">MenyuId</th>
+                <th class="text-center">MenyuName</th>
+                <th class="text-center">MenyuCategory</th>
+                <th class="text-center">MenyuText</th>
+                <th class="text-center">MenyuQiymet</th>
+                <th class="text-center">MenyuPhoto</th>
+                <th class="text-center" colspan="2"><a href="~/Admin/newmenyu">+</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.Menyu)
+            {
+            <tr class="text-center" style="text-align:center;">
+                <td>@item.MenyuId</td>
+                <td>@item.MenyuName</td>
+                <td>@item.MenyuCategoryId</td>
+                <td>@item.MenyuText</td>
+                <td>@item.MenyuQiymet</td>
+                <td>@item.MenyuPhoto</td>
+                <td><a href="~/Admin/deleteMenyu/@item.MenyuId">del</a></td>
+                <td><a href="~/Admin/editmenyu/@item.MenyuId">edit</a></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

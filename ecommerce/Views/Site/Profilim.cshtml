@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewBag.Title = "Profilim";
+    Layout = "~/Views/Shared/Site.cshtml";
+    var cookie = Request.Cookies["User"];
+}
+<div class="iqi">
+    <h1 style="color: blue;font-size: 50px;">Profilim</h1>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Profil Məlumatlarım&nbsp;<i class="fas fa-user-circle"></i></button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Sebetim&nbsp;<i class="fas fa-shopping-bag"></i></button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Hesab Balansım&nbsp;<i class="fas fa-clipboard"></i></button>
+        <form action="~/Site/Logout"><button class="tablinks" style="color: red;">Hesabdan cix&nbsp;<i class="fas fa-sign-out-alt"></i></button></form>
+    </div>
+    <div id="London" class="tabcontent">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3> Profil Melumatlarim</h3>
+                    <div class="container yg">
+                        <form method="post" enctype="multipart/form-data" action="~/Site/Changeinformation/@cookie["UserId"]">
+                            <label for="fname">Adınız və Soyadınız</label>
+                            <input class="taki" type="text" id="fname" name="UserName" placeholder="@Model.UserName">
+
+                            <label for="lname">E Posta Adresiniz</label>
+                            <input class="taki" type="text" id="lname" name="UserEmail" placeholder="@Model.UserEmail">
+
+                            <label for="lname">Telefon Nomresi</label>
+                            <input class="taki" type="text" id="lname" name="UserNumber" placeholder=" @Model.UserNumber">
+
+                            <label for="country">Cinsiyyet</label>
+                            <select class="ol" id="country" name="UserCinsId">
+                                @foreach (var item in ViewBag.gender)
+                                {
+                                    <option @(item.GenderId == Model.UserCinsId ? "selected" : "") value="@item.GenderId">@item.GenderName</option>
+                                }
+                            </select>
+
+                            <label for="lname">Profil Şəklini Dəyiş</label><br>
+                            <input type="file" id="lname" name="UserPhoto" placeholder="@Model.UserPhoto">
+                            <br><br>
+
+                            <label for="lname">Qeydiyyat Tarixi </label>
+                            <input class="taki" type="text" id="lname" readonly name="lastname" placeholder="@Model.UserQeydiyyat" value="@Model.UserQeydiyyat">
+                            <br>
+                            <input class="zaki" type="submit" value="Yadda Saxla" style="background-color: orange;">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Şifrəni Yenilə</h3>
+                    <div class="container yg">
+                        <form method="post" action="~/Site/UserPasswordEdit/@cookie["UserId"]">
+                            <label for="fname">Mövcud Şifrə</label>
+                            <input class="taki" type="text" id="fname" name="UserPassword" placeholder="Mövcud Şifrə">
+                            <label for="lname">Yeni Şifrə</label>
+                            <input class="taki" type="text" id="lname" name="NewUserPassword" placeholder="Yeni Şifrə">
+                            <input class="zaki" type="submit" value="Yadda Saxla" style="background-color: orange;">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Paris" class="tabcontent">
+        <div class="w3-container">
+            <h2>Səbətim</h2>
+                <table id="mytable" class="w3-table-all w3-centered">
+                    <thead>
+                        <tr>
+                            <th>Məhsul Şəkli</th>
+                            <th>Məhsul Adı</th>
+                            <th>Qiymət</th>
+                            <th>Ədəd</th>
+                            <th>Sil</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.Basket)
+                        {
+                            <tr>
+                                <td><img width="150" height="100" src="~/Content/img/@item.BasketPhoto" /></td>
+                                <td><input class="taki" type="text" name="BasketName" value="@item.BasketName"></td>
+                                <td><input class="price" type="text" readonly name="BasketPrice" value="@(item.BasketPrice * item.BasketNumber) "></td>
+                                <td><input class="count" type="text" readonly name="BasketNumber" value="@item.BasketNumber"></td>
+                                <td style="color: red;"><a href="~/Site/silbasket/@item.BasketId"><i class="fas fa-times"></i></a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <a href="~/Site/sifraiwtamam/@cookie["UserId"]">sifariwi tamamla</a>
+            <h2 style="color: lightseagreen;font-weight: 750;">Səbət Cəmi:<span style="color: red;"> 4.21 &nbsp;AZN</span></h2>
+
+            <input type="text" class="sebetpul" />
+        </div>
+    </div>
+    <div id="Tokyo" class="tabcontent" style="margin-bottom: 100px;">
+        <h1 style="color: darkblue;">SGHBNJ :</h1>
+    </div>
+</div>
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    document.getElementById("defaultOpen").click();
+    $(document).ready(function () {
+        alert();
+        update_amounts();
+    });
+    function update_amounts() {
+        var sum = 0.0;
+        $('#mytable > tbody > tr').each(function (e) {
+            var price = parseInt($(this).find('.price').val());
+            console.log(price);
+            sum += price;
+        })
+        $('.sebetpul').val(sum);
+    }
+</script>
+

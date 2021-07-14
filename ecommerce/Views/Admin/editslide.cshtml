@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "editslide";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+@using ecommerce.Models
+<div class="container">
+    <form action="~/Admin/updateslide/@Model.SlideId" method="post" class="was-validated" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="uname">SlideName:</label>
+            <input type="text" class="form-control" id="uname" placeholder="SlideName" name="SlideName" value="@Model.SlideName" required>
+
+        </div>
+        <div class="form-group">
+            <label for="pwd">SlidePhoto:</label>
+            <input type="file" class="form-control" id="pwd" placeholder="Enter password" name="SlidePhoto"  value="@Model.SlidePhoto" formenctype="multipart/form-data">
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+

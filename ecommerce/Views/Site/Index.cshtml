@@ -1,0 +1,564 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Site.cshtml";
+}
+<div class="wrapper" id="home">
+    <section class="section-main">
+        <div class="slider">
+            <div class="slides">
+                @*<div class="slide" style="background-image: url('~/Content/img/Restaurant2.jpg');">
+                    <div class="slide-data">
+                        <h1 class="tjh">We are salimo</h1>
+                        <p>In Web Design & Development</p><br><br>
+                        <a href="#about" class="change"><span>Learn more about us</span>&nbsp;<i class="fas fa-arrow-down"></i></a>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('~/Content/img/restaurant3.jpg');">
+                    <div class="slide-data">
+                        <h1 class="tjh">We are creative</h1>
+                        <p>Creative One Page Template</p><br><br>
+                        <a href="#about" class="change"><span>Learn more about us</span>&nbsp;<i class="fas fa-arrow-down"></i></a>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('~/Content/img/restaurant4.jpg');">
+                    <div class="slide-data">
+                        <h1 class="tjh">We are the best</h1>
+                        <p>Team With Big Talents</p><br><br>
+                        <a href="#about" class="change"><span>Learn more about us</span>&nbsp;<i class="fas fa-arrow-down"></i></a>
+                    </div>
+                </div>*@
+                @foreach (var item in ViewBag.SlideIndex)
+                {
+                    
+                    <div class="slide" style="background-image: url(../Content/img/@item.SlidePhoto);">
+                        <div class="slide-data">
+                            <h1 class="tjh">We are the best</h1>
+                            <p>Team With Big Talents</p><br><br>
+                            <a href="#about" class="change"><span>Learn more about us</span>&nbsp;<i class="fas fa-arrow-down"></i></a>
+                        </div>
+                    </div>
+                }
+            
+
+            <button class="arrows prev" onclick="plusslide(-1)">
+                <span><i class="fas fa-angle-left"></i></span>
+            </button>
+            <button class="arrows next" onclick="plusslide(1)">
+                <span><i class="fas fa-angle-right"></i></span>
+            </button>
+                
+            <div class="dots">
+                <span title="We are salimo" onclick="currentslide(1)"></span>
+                <span title="We are creative" onclick="currentslide(2)"></span>
+                <span title="We are the best" onclick="currentslide(3)"></span>
+            </div>
+            
+        </div>
+        </div>
+        
+    </section>
+    
+
+    
+
+    <section class="container sec1" id="about">
+        <h1><span>ABOUT</span> US</h1>
+        <h4>WHO WE ARE</h4>
+        <span class="ler">
+            <i class="fas fa-user"></i>
+
+        </span>
+        <br>
+        <div class="row">
+            <div class="col-sm-6 colone">
+                <br>
+                <h2>WE ARE <span>SALIMO</span></h2><hr>
+                @foreach (var item in ViewBag.About1)
+                {
+                    <p>@item.AboutId</p>
+                }
+                <br>
+                <ul class="pagination tab">
+                    <li class="page-item"><button class="page-link mission tablinks" onclick="openCity(event,'London')">our mission</button></li>
+                    <li class="page-item"><button class="page-link tablinks" onclick="openCity(event,'Paris')">our advantages</button></li>
+                    <li class="page-item"><button class="page-link tablinks" onclick="openCity(event,'Tokyo')">our guarantees</button></li>
+                </ul><br>
+                <div id="London" class="tabcontent"><p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in</p></div>
+                <div id="Paris" class="tabcontent"><p>donro akseodni quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud teg dub o tempor danki eryenus donor akseptor lonor</p></div>
+                <div id="Tokyo" class="tabcontent"><p>company sit amet, consectetur adipisicing elit. Minus obcaecati pariatur officiis molestias eveniet harum laudantium obcaecati pariatur officiis molestias eveniet harum laudantium sed optio iste eiusmod tempor incididunt ut labore et .</p></div>
+                <a href="#portfolio" class="ourportfolio">our portfolio&nbsp;<i class="fas fa-image"></i></a>
+            </div>
+            <div class="col-sm-6 coltwo">
+                <br><br><br>
+                @foreach (var item in ViewBag.About1)
+                {
+                    <img style="width: 100%;" src="~/Content/img/@item.AboutPhoto">
+                }
+                @*<img style="width: 100%;" src="~/Content/img/aboutimage.jpg">*@
+            </div>
+        </div>
+    </section> 
+
+    
+
+    <section class="section1 pb-5" style="background-color: black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="yuh mt-5" src="~/Content/img/pinkgirl.jpg">
+                </div>
+                <div class="col-sm-6 inma">
+                    <h1 class="eyc1 mt-5">PROJECT MANAGER</h1>
+                    <h2 class="gf">MISS KATHERINA HALE</h2><br>
+                    <p class="keyc"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus obcaecati pariatur officiis molestias eveniet harum laudantium sed optio iste. Iste, alias, non libero recusandae fugiat praesentium delectus inventore accusamus veniam!</i></p><br>
+                    <blockquote class="w3-panel w3-leftbar">
+                        <p class="w3-large"><i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia "</i></p>
+                    </blockquote>
+                    <a href="#" class="kal ml-3" data-aos="flip-up"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="kal1 ml-3" data-aos="flip-up"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="kal1 ml-3" data-aos="flip-up"><i class="fab fa-google"></i></a>
+                    <a href="#" class="kal1 ml-3" data-aos="flip-up"><i class="fab fa-chrome"></i></a>
+                    <a href="#" class="kal1 ml-3" data-aos="flip-up"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section2 pb-5 pt-4" id="services">
+        <div class="container-fluid">
+            <h1 class="mt-5"><span>Bədir</span>Restaurant</h1>
+            <h3>Fəaliyyətlərimiz</h3>
+            <span class="ler">
+                <i class="fas fa-cogs"></i>
+            </span><br><br><br>
+            <div class="row hg">
+                <div class="col-sm-3 df flip-card">
+                    <h5 class="mt-3 solit">Restoran Xidməti</h5>
+                    <p class="mt-4 solit">Restaranımız 2020 ci ildən müştərilərin fəlaiyyətindədir.İlqar Bıdirov adına yaradılıb və hər zaman da fəlaiyyətini davam etdirəcək.</p>
+                </div>
+
+                <div class="col-sm-3 df ml-5">
+                    <h5 class="mt-3 solit">Çatdrılma Xidməti</h5>
+                    <p class="mt-4 solit">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
+                </div>
+                @foreach (var item in ViewBag.Xidmet)
+                {
+                <div class="col-sm-3 df ml-5">
+                    <h5 class="mt-3 solit"> @item.XidmetName</h5>
+                    <p class="mt-4 solit">@item.XidmetText</p>
+                </div>
+                }
+                @*<div class="col-sm-3 df ml-5">
+                    <h5 class="mt-3 solit">Aşpaz Kamandası</h5>
+                    <p class="mt-4 solit">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
+                </div>
+                <div class="col-sm-3 df ml-1 mt-5">
+                    <h5 class="mt-3 solit">Restoran Nəzarəti</h5>
+                    <p class="mt-4 solit">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
+                </div>
+                <div class="col-sm-3 df mt-5 ml-5">
+                    <h5 class="mt-3 solit">Filiallar Barədə</h5>
+                    <p class="mt-4 solit">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
+                </div>
+                <div class="col-sm-3 df mt-5 ml-5">
+                    <h5 class="mt-3 solit">Müştəri  Məmuniyyəti</h5>
+                    <p class="mt-4 solit">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
+                </div>*@
+            </div>
+        </div>
+    </section>
+    <section class="sectionm">
+        <section class="section-spacing bottom-none inverse-bg" id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h2><span class="hog">Bizim</span>&nbsp;Menyumuz</h2>
+                            <span class="ler">
+                                <i class="fas fa-cogs"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <ul id="filter-list">
+                            <li class="filter active" data-filter="all">Bütün Yeməklər</li>
+                            <li class="filter" data-filter="1">Manqal yeməkkləri</li>
+                            <li class="filter" data-filter="2">Fast Food</li>
+                            <li class="filter" data-filter="3">İçkilər</li>
+                            <li class="filter" data-filter="4">Şirniyyatlar</li>
+                            <li class="filter" data-filter="5">Alkoqol</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-outer">
+                <ul class="gallery-items" style="padding:0px; position: relative;
+			 height: 1261px;">
+                    @*<li class="filtr-item" data-category="1" style="opacity: 1; transform: scale(1) translate3d(0px,0px,0px);backface-visibility: hidden;
+			 	perspective: 1000px; transform-style: preserve-3d; position: absolute;
+			 	transition: all 0.5s ease-in-out 0ms; pointer-events: auto;">
+                        <div class="gallery-inner">
+                            <img src="~/Content/img/lion.jpg" alt="">
+                            <div class="gallery-overlay">
+                                <a href="image/lion.jpg" class="venobox vbox-item" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="filtr-item" data-category="2" style="opacity: 1; transform: scale(1) translate3d(315.25px,0px,0px);backface-visibility: hidden;
+			 	perspective: 1000px; transform-style: preserve-3d; position: absolute;
+			 	transition: all 0.5s ease-in-out 0ms; pointer-events: auto;">
+                        <div class="gallery-inner">
+                            <img src="~/Content/img/horse.jpg" alt="">
+                            <div class="gallery-overlay">
+                                <a href="image/horse.jpg" class="venobox vbox-item" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="filtr-item" data-category="4" style="opacity: 1; transform: scale(1) translate3d(630.5px,0px,0px);backface-visibility: hidden;
+			 	perspective: 1000px; transform-style: preserve-3d; position: absolute;
+			 	transition: all 0.5s ease-in-out 0ms; pointer-events: auto;">
+                        <div class="gallery-inner">
+                            <img src="~/Content/img/ele.jpg" alt="">
+                            <div class="gallery-overlay">
+                                <a href="image/ele.jpg" class="venobox vbox-item" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="filtr-item" data-category="3" style="opacity: 1; transform: scale(1) translate3d(945.7px,0px,0px);backface-visibility: hidden;
+			 	perspective: 1000px; transform-style: preserve-3d; position: absolute;
+			 	transition: all 0.5s ease-in-out 0ms; pointer-events: auto;">
+                        <div class="gallery-inner">
+                            <img src="~/Content/img/tiger-2.jpg" alt="">
+                            <div class="gallery-overlay">
+                                <a href="image/tiger-2.jpg" class="venobox vbox-item" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="filtr-item" data-category="3" style="opacity: 1; transform: scale(1) translate3d(0px,315.25px,0px);backface-visibility: hidden;
+			 	perspective: 1000px; transform-style: preserve-3d; position: absolute;
+			 	transition: all 0.5s ease-in-out 0ms; pointer-events: auto;">
+                        <div class="gallery-inner">
+                            <img src="~/Content/img/tiger-3.jpg" alt="">
+                            <div class="gallery-overlay">
+                                <a href="image/tiger-3.jpg" class="venobox vbox-item" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="filtr-item" data-category="5" style="opacity: 1; transform: scale(1) translate3d(315.25px,315.25px,0px);backface-visibility: hidden;
+			 	perspective: 1000px; transform-style: preserve-3d; position: absolute;
+			 	transition: all 0.5s ease-in-out 0ms; pointer-events: auto;">
+                        <div class="gallery-inner">
+                            <img src="~/Content/img/rhino.jpg" alt="">
+                            <div class="gallery-overlay">
+                                <a href="image/rhino.jpg" class="venobox vbox-item" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="filtr-item" data-category="3" style="opacity: 1; transform: scale(1) translate3d(630.5px,315.25px,0px);backface-visibility: hidden;
+			 	perspective: 1000px; transform-style: preserve-3d; position: absolute;
+			 	transition: all 0.5s ease-in-out 0ms; pointer-events: auto;">
+                        <div class="gallery-inner">
+                            <img src="~/Content/img/leo.jpg" alt="">
+                            <div class="gallery-overlay">
+                                <a href="image/leo.jpg" class="venobox vbox-item" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="filtr-item" data-category="4" style="opacity: 1; transform: scale(1) translate3d(945.7px,315.25px,0px);backface-visibility: hidden;
+			 	perspective: 1000px; transform-style: preserve-3d; position: absolute;
+			 	transition: all 0.5s ease-in-out 0ms; pointer-events: auto;">
+                        <div class="gallery-inner">
+                            <img src="~/Content/img/yak.jpg" alt="">
+                            <div class="gallery-overlay">
+                                <a href="image/yak.jpg" class="venobox vbox-item" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="filtr-item" data-category="5" style="opacity: 1; transform: scale(1) translate3d(0px,630.5px,0px);backface-visibility: hidden;
+			 	perspective: 1000px; transform-style: preserve-3d; position: absolute;
+			 	transition: all 0.5s ease-in-out 0ms; pointer-events: auto;">
+                        <div class="gallery-inner">
+                            <img src="~/Content/img/rhino-2.jpg" alt="">
+                            <div class="gallery-overlay">
+                                <a href="image/rhino-2.jpg" class="venobox vbox-item" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="filtr-item" data-category="1" style="opacity: 1; transform: scale(1) translate3d(315.25px,630.5px,0px);backface-visibility: hidden;
+			 	perspective: 1000px; transform-style: preserve-3d; position: absolute;
+			 	transition: all 0.5s ease-in-out 0ms; pointer-events: auto;">
+                        <div class="gallery-inner">
+                            <img src="~/Content/img/lion-3.jpg" alt="">
+                            <div class="gallery-overlay">
+                                <a href="image/lion-3.jpg" class="venobox vbox-item" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="filtr-item" data-category="4" style="opacity: 1; transform: scale(1) translate3d(630.5px,630.5px,0px);backface-visibility: hidden;
+			 	perspective: 1000px; transform-style: preserve-3d; position: absolute;
+			 	transition: all 0.5s ease-in-out 0ms; pointer-events: auto;">
+                        <div class="gallery-inner">
+                            <img src="~/Content/img/ele.jpg" alt="">
+                            <div class="gallery-overlay">
+                                <a href="image/ele.jpg" class="venobox vbox-item" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                    </li>*@
+                    @*<li class="filtr-item" data-category="2" style="opacity: 1; transform: scale(1) translate3d(945.7px,630.5px,0px);backface-visibility: hidden;
+			 	perspective: 1000px; transform-style: preserve-3d; position: absolute;
+			 	transition: all 0.5s ease-in-out 0ms; pointer-events: auto;">
+                        <div class="gallery-inner">
+                            <img src="~/Content/img/horse-2.jpg" alt="">
+                            <div class="gallery-overlay">
+                                <a href="image/horse-2.jpg" class="venobox vbox-item" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                    </li>*@
+                    @foreach (var item in ViewBag.Menyu)
+                    {
+                        <li class="filtr-item" data-category="2" style="opacity: 1; transform: scale(1) translate3d(945.7px,630.5px,0px);backface-visibility: hidden;
+			 	perspective: 1000px; transform-style: preserve-3d; position: absolute;
+			 	transition: all 0.5s ease-in-out 0ms; pointer-events: auto;">
+                            <div class="gallery-inner">
+                                <img src="~/Content/img/@item.MenyuPhoto" alt="">
+                                <div class="gallery-overlay">
+                                    <a href="~/Site/Detail/@item.MenyuId" class="venobox vbox-item" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    }
+                </ul>
+            </div>
+        </section>
+        
+
+        <section class="facts mt-5">
+            <div class="section-overlay">
+                <div class="container jiy">
+                    <div class="text-center top-text">
+                        <h1 class="km"><span>Cool</span> Facts</h1>
+                        <h4 class="ko">our numbers</h4>
+                    </div>
+                    <div class="fact-badges">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6">
+                                <i class="fa fa-briefcase"></i>
+                                <h2>
+                                    <span><strong class="badges-counter">77</strong>+</span>
+                                </h2>
+                                <h4 class="ko">Projects</h4>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <i class="fa fa-clock-o"></i>
+                                <h2>
+                                    <span><strong class="badges-counter">80</strong>+</span>
+                                </h2>
+                                <h4 class="ko">Hours Work</h4>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <i class="fa fa-home"></i>
+                                <h2>
+                                    <span><strong class="badges-counter">18</strong>+</span>
+                                </h2>
+                                <h4 class="ko">Offices</h4>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <i class="fa fa-user"></i>
+                                <h2>
+                                    <span><strong class="badges-counter">67</strong>+</span>
+                                </h2>
+                                <h4 class="ko">Clients</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="team-section" id="team">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title">
+                        <h1 class="jol"><span class="hog">Our</span> Team</h1>
+                        <p class="jol">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="team-items">
+                        @foreach (var item in ViewBag.Team)
+                        {
+                            <div class="item">
+                                <img src="~/Content/img/@item.TeamPhoto" alt="team" />
+                                <div class="inner">
+                                    <div class="info">
+                                        <h5>@item.TeamName</h5>
+                                        <p>@item.TeamVezife</p>
+                                        <div class="social-links">
+                                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                                            <a href=""><i class="fab fa-whatsapp"></i></a>
+                                            <a href=""><i class="fab fa-instagram-square"></i></a>
+                                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact" class="contact">
+            <div class="content">
+                <h2 class="ko"><span>contact</span> us</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <div class="container nes">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="text">
+                            <h3 class="as">Address</h3>
+                            <p>Baki seheri,yasaml rayonu serifzasede 12 kucesi</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-phone-volume"></i></div>
+                        <div class="text">
+                            <h3 class="as">Phone</h3>
+                            <p>0507679671</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div class="text">
+                            <h3 class="as">Email</h3>
+                            <p>bedirov067@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactForm">
+                    <form method="post" action="~/Site/insertcontact">
+                        <h2>Send Message</h2>
+                        <div class="inputBox">
+                            <input type="text" name="ContactName" required="required">
+                            <span>Full Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="ContactEmail" required="required">
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox">
+                            <textarea name="ContactText" required="required"></textarea>
+                            <span>Type your Message...</span>
+                        </div>
+                        <div class="inputBox ry">
+                            <input class="ry" type="submit" name="" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="container marq">
+            <marquee class="marquee">
+                <img height="33" src="~/Content/img/loqoimg2.png">&nbsp;
+                <img height="33" src="~/Content/img/loqoimg3.png">&nbsp;
+                <img height="33" src="~/Content/img/loqoimg4.png">&nbsp;
+                <img height="33" src="~/Content/img/loqoimg5.png">&nbsp;
+                <img height="33" src="~/Content/img/loqoimg6.png">&nbsp;
+                <img height="33" src="~/Content/img/loqoimg7.png">&nbsp;
+                <img height="33" src="~/Content/img/loqoimg8.png">
+            </marquee>
+        </section>
+        <a href="#" class="btn topbuton"><i class="fas fa-arrow-up"></i></a>
+        @*<a href="login.html" class="qeydiyyat"><i class="fas fa-user-tie"></i>&nbsp;login</a>*@
+
+
+        <button class="qeydiyyat"  id="myBtn"> Login</button>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    @*<h2>Modal Header</h2>*@
+                </div>
+                <div class="modal-body">
+                    <div class="hero">
+                        <div class="form-box">
+                            <div class="button-box">
+                                <div id="btntw"></div>
+                                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                                <button type="button" class="toggle-btn" onclick="register()">SignUp</button>
+                            </div>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                            <form method="post" action="~/Site/Login" id="login" class="input-group">
+                                <input type="text" name="login" class="input-field" placeholder="UserName *" required />
+                                <input type="text" name="pass" class="input-field" placeholder="Password *" required />
+                                <input type="checkbox" class="chech-box" required /><span class="rem">Remember Password</span>
+                                <a href="~/Site/ForgetPass">Sifreni Deyis</a>
+                                <button type="submit" class="submit-btn">Log In</button>
+                            </form>
+                            <form method="post" action="~/Site/SignUp" id="register" class="input-group">
+                                <input type="text" name="username" class="input-field" placeholder="UserName *" required />
+                                <input type="email" name="UserEmail" class="input-field" placeholder="UserEmail *" required />
+                                <input type="text" name="password" class="input-field" placeholder="Password *" required />
+                                <input type="text" name="password2" class="input-field" placeholder="Password *" required />
+                                <input type="checkbox" class="chech-box" required /><span class="rem">I agree to the terms & conditions</span>
+                                <button type="submit" class="submit-btn">SignUp</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+                    
+
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+
+            function register() {
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+            }
+
+            function login() {
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0px";
+            }
+        </script>
+

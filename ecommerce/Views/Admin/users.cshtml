@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "users";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<div class="container">
+    <h2>User Admin </h2>
+    <table class="table table-bordered table-hover bg-warning" style="cursor: pointer;">
+        <thead>
+            <tr class="text-center" style="text-align:center !important;">
+                <th class="text-center">UserId</th>
+                <th class="text-center">UserName</th>
+                <th class="text-center">UserEmail</th>
+                <th class="text-center">UserNumber</th>
+                <th class="text-center">UserPhoto</th>
+                <th class="text-center">UserBalans</th>
+                <th class="text-center" colspan="2">islemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.user)
+            {
+                <tr class="text-center" style="text-align:center;">
+                    <td>@item.UserId</td>
+                    <td>@item.UserName</td>
+                    <td>@item.UserEmail</td>
+                    <td>@item.UserNumber</td>
+                    <td>@item.UserPhoto</td>
+                    <td>@item.UserBalans</td>
+                    <td><a href="~/Admin/deleteuser/@item.UserId">del</a></td>
+                    <td><a href="~/Admin/edituser/@item.UserId">edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

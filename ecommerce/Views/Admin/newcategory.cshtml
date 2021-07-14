@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "newcategory";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+<div class="container">
+    <form action="~/Admin/insertnewcategory" method="post" class="was-validated" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>CategoryName:</label>
+            <input type="text" class="form-control" id="uname" placeholder="CategoryName" name="CategoryName"  required />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
